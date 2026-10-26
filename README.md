@@ -299,15 +299,15 @@ review_queue = df.sort_values("anomaly_score", ascending=False).head(50)
 
 ---
 
-## 12. Team
+## 12. Team & Phase 1 Contributions
 
-| Member | Responsibilities |
-| --- | --- |
-| Ritik Ranjan | Data inspection, removing duplicates, the time-based split, preprocessing that avoids leakage |
-| Archit Mamodiya  | EDA, the log-amount transform, ranking features on the training period |
-| Shagun Vishnoi | GMM experiment design, choosing the number of components and feature set across seeds, picking the final model, connecting the pipeline |
-| Aditya Raj | Fitting the GMM, scoring transactions, AIC/BIC analysis, saving the model |
-|  Naveen Kumar| Alarm threshold, test metrics, top-k precision, confidence intervals, the report |
+| Member | Primary Responsibility | Notebook |
+| --- | --- | --- |
+| **Ritik Ranjan** | Data inspection, deduplication, chronological train/validation/test split, leakage-safe preprocessing | `notebooks/01_data_inspection_and_split.ipynb` |
+| **Archit Mamodiya** | Exploratory data analysis, diurnal time patterns, log-amount transformation | `notebooks/02_eda.ipynb` |
+| **Shagun Vishnoi** | Feature divergence analysis, KS separation testing, feature correlation heatmap | `notebooks/02_eda.ipynb` |
+| **Aditya Raj** | GMM statistical theory, EM fitting, negative log-likelihood scoring, AIC/BIC analysis, model persistence | `notebooks/03_gmm_experiments.ipynb` |
+| **Naveen Kumar** | Project integration, operational threshold selection on validation, test evaluation, PR-AUC, confusion matrix, report | `notebooks/04_gmm_evaluation.ipynb` |
 
 ---
 
